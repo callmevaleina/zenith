@@ -8,10 +8,22 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        gray: "#757575",
+        lightGray: "#a7b0ba",
+        extraLightGray: "#eef2f6",
+        extraExtraLightGray: "#f8fafb",
+        darkGray: "#343a3e",
+        extraDarkGray: "#343a3f",
+        grayTitle: "#505866",
+        grayText: "#767f86",
+        redPrimary: "#ff545a",
+        grayIcon: "50616c",
+        blueRestaurant: "#70a9ff",
+        greenHotel:"#00c61c",
+        yellowDestination:"#ffcc5d",
+        purpleRealState:"#bd70ff",
+        orangeAutomotive:"#ff7a40",
       },
     },
   },

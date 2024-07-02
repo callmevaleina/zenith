@@ -2,32 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --color: #757575;
+  --background-color: #fff;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: var(--color);
+  background: var(--background-color);
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+.custom-shadow {
+  box-shadow: 0 0px 10px rgba(71, 71, 71, .2);
+}
+
+
+.parallaxContainer {
+  position: relative;
+  width: 100%;
+  height: 390px;
+  background-image: url('/assets/counter/counter-banner.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  width: 100%;
+  position: relative;
+  background: rgba(100, 89, 89, 0.5);
+  padding: 20px;
+  height: 390px;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .parallaxContainer {
+    height: 700px;
+  }
+
+  .overlay {
+    height: 700px;
   }
 }
